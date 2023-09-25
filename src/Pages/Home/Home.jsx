@@ -1,4 +1,9 @@
+import { useLoaderData } from "react-router-dom";
+import HomeCards from "./HomeCards";
+
 const Home = () => {
+  const cards = useLoaderData();
+
   return (
     <div>
       <div>
@@ -31,7 +36,7 @@ const Home = () => {
       </div>
 
       <div className="mt-10">
-        <h4>show all phone</h4>
+        <HomeCards className="" cards={cards}></HomeCards>
       </div>
     </div>
   );
