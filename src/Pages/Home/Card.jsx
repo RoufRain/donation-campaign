@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Card = ({ card }) => {
   const {
@@ -14,7 +14,7 @@ const Card = ({ card }) => {
 
   return (
     <div className="flex justify-center m-5">
-      <NavLink to={"/CardDetails"}>
+      <Link to={`/CardDetails/${id}`}>
         <div
           style={{ background: Card_bg }}
           className="relative flex w-80 flex-col rounded-xl text-gray-700 shadow-md"
@@ -23,7 +23,7 @@ const Card = ({ card }) => {
             <img className="h-full w-full" src={Picture} />
           </div>
           <div className="p-6">
-            <div className="mb-2 flex items-center justify-between w- ">
+            <div className="mb-2 flex items-center justify-between">
               <p
                 style={{ background: Category_bg, color: Text_button_bg }}
                 className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 rounded-md p-1"
@@ -39,7 +39,7 @@ const Card = ({ card }) => {
             </p>
           </div>
         </div>
-      </NavLink>
+      </Link>
     </div>
   );
 };
