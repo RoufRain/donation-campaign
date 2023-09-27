@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import HomeCards from "./HomeCards";
+import Health from "../../assets/Health.png";
 
 const Home = () => {
   const cards = useLoaderData();
@@ -10,7 +11,7 @@ const Home = () => {
         <div
           className="hero min-h-screen"
           style={{
-            backgroundImage: "url(/src/assets/Health.png)",
+            backgroundImage: `url(${Health})`,
           }}
         >
           <div className="hero-overlay bg-opacity-50"></div>

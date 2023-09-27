@@ -16,21 +16,12 @@ const Donation = () => {
     }
   }, []);
 
-  // console.log(donation);
-  // const handleRemove = ()=>{
-  //     // localStorage.clear();
-  //     // setDonation([]);
-  //     // setNoFound('No Data Found');
-  // }
-
   return (
     <div>
       {noFound ? (
         <p className="h-[80vh] flex justify-center items-center">{noFound}</p>
       ) : (
         <div>
-          {/* {donation.length > 0 && <button onClick={handleRemove()} className="px-2 mb-5 rounded text-white font-semibold bg-[#ed3131] mx-auto justify-center items-center">Deleted All</button>} */}
-
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 p-5">
             {isShow
               ? donation.map((card) => (

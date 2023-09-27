@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-no-undef */
 import { NavLink } from "react-router-dom";
+import Logo from "../../../assets/Logo.png";
 
 const Navbar = () => {
   return (
     <div>
       <nav className="flex flex-wrap justify-center gap-10 lg:justify-between items-center py-7">
-        <img src="/src/assets/Logo.png" alt="" />
+        <img src={Logo} alt="image" />
         <ul className="flex flex-wrap justify-center gap-12 ">
           <li>
             <NavLink
@@ -14,13 +15,11 @@ const Navbar = () => {
                 isPending
                   ? "pending"
                   : isActive
-                  ? "text-blue-500 underline"
+                  ? "text-red-500  underline font-bold"
                   : ""
               }
             >
-              <span className="text-center text-[black] text-xl font-normal ">
-                Home
-              </span>
+              <span className="text-center  text-xl ">Home</span>
             </NavLink>
           </li>
 
@@ -31,13 +30,11 @@ const Navbar = () => {
                 isPending
                   ? "pending"
                   : isActive
-                  ? "text-blue-500 underline"
+                  ? "text-red-500  underline font-bold"
                   : ""
               }
             >
-              <span className="text-center text-[black] text-xl font-normal ">
-                Donation
-              </span>
+              <span className="text-center  text-xl ">Donation</span>
             </NavLink>
           </li>
 
@@ -48,13 +45,11 @@ const Navbar = () => {
                 isPending
                   ? "pending"
                   : isActive
-                  ? "text-blue-500 underline"
+                  ? "text-red-500  underline font-bold"
                   : ""
               }
             >
-              <span className="text-center text-[black] text-xl font-normal ">
-                Statistics
-              </span>
+              <span className="text-center text-xl ">Statistics</span>
             </NavLink>
           </li>
         </ul>
